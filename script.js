@@ -16,36 +16,19 @@ function pageLoad() {
 	_swiperWrap.insertAdjacentHTML('afterbegin', '<div class="swiper-slide">Slide 2</div>');
 	_swiperWrap.insertAdjacentHTML('afterbegin', '<div class="swiper-slide">Slide 1</div>');
 	_swiperCont.insertAdjacentHTML('beforeend', '<div class="swiper-pagination"></div>');
-	_swiperCont.insertAdjacentHTML('beforeend', '<button class="btn">Prev</button>');
-	_swiperCont.insertAdjacentHTML('beforeend', '<button class="btn">Next</button>');
+	_swiperCont.insertAdjacentHTML('beforeend', '<button class="swiper-button-next">Prev</button>');
+	_swiperCont.insertAdjacentHTML('beforeend', '<button class="swiper-button-prev">Next</button>');
 	
-	
-	var mySwiper = new Swiper('.swiper-container', {
-		// Optional parameters
-		direction: 'vertical',
-		loop: true,
-
-		// If we need pagination
+	var swiper = new Swiper('.swiper-container', {
 		pagination: {
 			el: '.swiper-pagination',
+			type: 'progressbar',
 		},
-
-		// Navigation arrows
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-
-		// And if we need scrollbar
-		scrollbar: {
-			el: '.swiper-scrollbar',
-		},
-	})
-
-	var mySwiper = new Swiper('.swiper-container', {
-    speed: 400,
-    spaceBetween: 100
-});
+	});
 
 }
 
